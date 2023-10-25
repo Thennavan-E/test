@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <button onclick="data()">Data</button>
+    <button onclick="edit()">Edit</button>
+    <div onload="data()">
+        <input type="text">Name: <span id="nam"></span>
+    </div>
+    <script>
+        let value={
+                name:"thens",
+                age:20
+            }
+        function data()
+        {
+            console.log(value.name,value.age);
+            document.getElementById("nam").innerHTML=value.name;
+        }
+        function edit()
+        {
+            document.getElementById("nam").remove(value.name);
+        }
+    </script>
+</body>
+</html>
